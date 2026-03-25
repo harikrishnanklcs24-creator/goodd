@@ -208,7 +208,7 @@ export default function App() {
     <div className="min-h-screen bg-[#F8FAFC] text-slate-900 font-sans selection:bg-blue-100">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 px-6 py-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0">
           <div className="flex items-center gap-3">
             <div className="bg-blue-600 p-2 rounded-lg shadow-lg shadow-blue-200">
               <FileSearch className="w-6 h-6 text-white" />
@@ -246,7 +246,7 @@ export default function App() {
 
             <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-200 overflow-hidden">
               <div className="p-8 space-y-6">
-                <div className="flex items-center justify-between">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <label className="text-sm font-bold text-slate-700 uppercase tracking-widest">Paper Content</label>
                   <div className="flex gap-2">
                     <button 
@@ -319,7 +319,7 @@ export default function App() {
                 </button>
               </div>
               
-              <div className="bg-slate-50 border-t border-slate-200 p-6 grid grid-cols-3 gap-4">
+              <div className="bg-slate-50 border-t border-slate-200 p-4 sm:p-6 grid grid-cols-1 sm:grid-cols-3 gap-4 border-b sm:border-b-0 border-slate-200">
                 <div className="flex items-center gap-3">
                   <div className="p-2 bg-white rounded-lg shadow-sm">
                     <CheckCircle className="w-5 h-5 text-emerald-500" />
@@ -473,7 +473,7 @@ export default function App() {
                   <p className="text-[10px] font-medium text-slate-400 uppercase tracking-widest">Usage Analysis</p>
                 </div>
 
-                <div className="w-full grid grid-cols-2 gap-4">
+                <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex flex-col items-center space-y-2">
                     <div className="relative w-24 h-24">
                       <svg className="w-24 h-24 transform -rotate-90">
@@ -657,7 +657,7 @@ export default function App() {
                   <div className="divide-y divide-slate-100">
                     {report.flaggedContent.map((item, idx) => (
                       <div key={idx} className="p-6 hover:bg-slate-50 transition-colors space-y-3">
-                        <div className="flex items-center justify-between">
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                           <span className={cn(
                             "px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-tighter",
                             item.type === 'Direct Copying' ? "bg-rose-100 text-rose-700" :
